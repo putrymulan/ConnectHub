@@ -1,127 +1,74 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">     
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
-    <title>BERANDA</title>
-</head> 
-<body bgcolor="#85D7D4"> 
-    <header align = "center">  
-        <nav> 
-            <div class="logo"> 
-                <img width="225" 
-                src="bahan/Transportasi Umum.webp"
-                alt="Transportasi Umum.webp"> 
-                <h1>Layanan Informasi Transportasi Umum</h1> 
-            </div> 
-            <a href="beranda.html">Beranda</a> || 
-            <a href="#">Tentang</a> || 
-            <a href="login.html">Login</a> 
-        </nav>      
-    </header>
-    <br> 
-    <main> 
-        <table border="1"> 
-            <tr> 
-                <td colspan="2"> 
-                    <h3>DAFTAR TRANSPORTASI UMUM : </h3> 
-                </td> 
-            </tr> 
-            <tr> 
-                <td> 
-                    <img width="200" src="bahan/travel.png" alt="travel.png"> 
-                </td> 
-                <td> 
-                    <h3> 
-                        <a href="#">TRAVEL</a>
-                    </h3>
-                    <p>  
-                        <ul> 
-                            <li>Nama Travel : Dieng</li>
-                            <li>Range Harga : 150.000 - 450.000</li> 
-                            <li>Jumlah Seat : 18</li>                         
-                            <li>Tujuan : Malang, Surabaya, Yogyakarta, Bandung</li>
-                        </ul>
-                    </p>                 
-                </td> 
-            </tr>
-            <tr> 
-                <td> 
-                    <img width="200" src="bahan/bus.png" alt="bus.png">              
-                </td> 
-                <td> 
-                    <h3> 
-                        <a href="#">BUS</a> 
-                    </h3> 
-                    <p>  
-                        <ul> 
-                            <li>Nama Bus : Gunung Harta</li>
-                            <li>Range Harga : 150.000 - 450.000</li> 
-                            <li>Jumlah Seat : 44</li>                         
-                            <li>Tujuan : Malang, Yogyakarta, Bandung, Jakarta</li>
-                        </ul> 
-                    </p> 
-                </td> 
-            </tr>
-            <tr> 
-                <td> 
-                    <img width="200" src="bahan/kereta.png" alt="kereta.png">              
-                </td> 
-                <td> 
-                    <h3> 
-                        <a href="#">KERETA API</a> 
-                    </h3> 
-                    <p>  
-                        <ul> 
-                            <li>Nama Kereta Api : Gajayana Express</li>
-                            <li>Range Harga : 220.000 - 600.000</li> 
-                            <li>Jumlah Seat : 60</li>                         
-                            <li>Tujuan : Malang, Bandung, Pasar Senen</li>
-                        </ul> 
-                    </p> 
-                </td> 
-            </tr>
-            <tr> 
-                <td> 
-                    <img width="200" src="bahan/kapal.png" alt="kapal.png">              
-                </td> 
-                <td> 
-                    <h3> 
-                        <a href="#">KAPAL LAUT</a> 
-                    </h3> 
-                    <p>  
-                        <ul> 
-                            <li>Nama Kapal Laut : Dharma Kartika VIII</li>
-                            <li>Range Harga : 65.000 - 800.000</li> 
-                            <li>Jenis Tiket : Ekonomi, Kelas 1 2 3, VIP</li>                         
-                            <li>Tujuan : Surabaya - Lembar - Waingapu</li>
-                        </ul> 
-                    </p> 
-                </td> 
-            </tr>
-            <tr> 
-                <td> 
-                    <img width="200" src="bahan/pesawat.png" alt="pesawat.png">              
-                </td> 
-                <td> 
-                    <h3> 
-                        <a href="#">PESAWAT TERBANG</a> 
-                    </h3> 
-                    <p>  
-                        <ul> 
-                            <li>Nama Maskapai : Garuda Indonesia</li>
-                            <li>Range Harga : 1.800.000 - 3.000.000</li> 
-                            <li>Jenis Tiket : Ekonomi, Bisnis, First Class</li>                         
-                            <li>Tujuan : Bali - Jakarta</li>
-                        </ul> 
-                    </p> 
-                </td> 
-            </tr>
-        </table>
-    </main>
-    <footer> 
-        <h4 align="center">&copy; Layanan Informasi Transportasi Umum by ConnectHub</h4> 
-    </footer> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@500;700&display=swap"rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body> 
+    <header>
+        <nav>
+        <div class="logo"> 
+            <img width="300" src ="bahan/ICON.png" alt="Gambar Tidak Ditemukan"/> 
+            <h1>Selamat Datang di Layanan Informasi Transportasi Umum</h1>
+        </div>
+        <ul> 
+          <li><a href="beranda.html" class="btn_login">Beranda</a></li> 
+          <li><a href="#" class="btn_login">Layanan</a></li> 
+          <li><a href="login.html" class="btn_login">Masuk</a></li> 
+        </ul>
+        </nav> 
+        </header>
+    <section>
+        <p>Website ini memberikan informasi lengkap mengenai layanan transportasi umum di kota kami.</p>
+    </section>
+    <div class="card-categories">
+        <div class="card">
+            <div class="card-image">
+                <img src="bahan/bus.png" alt="gambar tidak ditemukan" />
+                <h5>Bus Pariwisata</h5> 
+            </div>
+        </div>
+    </div>  
+    <div class="card-categories">
+        <div class="card">
+            <div class="card-image">
+                <img src="bahan/travel.png" alt="gambar tidak ditemukan" />
+                <h5>Travel</h5> 
+            </div>
+        </div>
+    </div>
+    <div class="card-categories">
+        <div class="card">
+            <div class="card-image">
+                <img src="bahan/kapal.png" alt="gambar tidak ditemukan" />
+                <h5>Kapal Pesiar</h5> 
+            </div>
+        </div>
+    </div>
+    <div class="card-categories">
+        <div class="card">
+            <div class="card-image">
+                <img src="bahan/pesawat.png" alt="gambar tidak ditemukan" />
+                <h5>Pesawat</h5> 
+            </div>
+        </div>
+    </div>
+    <div class="card-categories">
+        <div class="card">
+            <div class="card-image">
+                <img src="bahan/kereta.png" alt="gambar tidak ditemukan" />
+                <h5>Kereta Api</h5> 
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h4>Hak Cipta &copy; 2024 ConnectHub</h4>
+    </footer>
 </body>
 </html>
