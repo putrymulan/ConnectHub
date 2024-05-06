@@ -4,8 +4,8 @@
   <meta charset="UTF-8" /> 
   <link rel="icon" href="bahan/ICON.png" /> 
   <link rel="stylesheet" href="admin.css" /> 
-  <link href=https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css rel="stylesheet"/> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>Admin ConnectHub</title> 
 </head> 
 <body> 
@@ -16,7 +16,7 @@
         </div> 
             <ul class="nav-links"> 
                 <li> 
-                    <a href="#" class="active"> 
+                    <a href="admin.html" class = "active"> 
                         <i class="bx bx-grid-alt"></i> 
                         <span class="links_name">Dashboard</span> 
                     </a> 
@@ -38,30 +38,44 @@
                         <i class="bx bx-log-out"></i>
                         <span class="links_name">Keluar</span></a>
                 </li>
-                </ul>
-    </div>
-    <section class="home-section">
-        <nav>
-            <div class="sidebar-button">
-                <i class="bx bx-menu sidebarBtn"></i>
-            </div>
-            <div class="profile-details">
-                <span class="admin_name">CONNECTHUB</span>
-            </div>
-        </nav>
-            <div class="home-content">
-                <h1 class="header">Selamat Datang Admin di Layanan Informasi Transportasi Umum</h1>
-            </div>
-    </section>    
+            </ul>
+        </div>
+   <section class="home-section"> 
+	 	<nav> 
+	 	   <div class="sidebar-button"> 
+	 	 	<i class="bx bx-menu sidebarBtn"></i> 
+	 	   </div> 
+	 	   <div class="profile-details"> 
+	 	      <span class="admin_name">CONNECTHUB</span> 
+	 	   </div> 
+	 	</nav> 
+	 	<div class="home-content"> 
+      <h1 class="header">Selamat Datang Admin di Layanan Informasi Transportasi Umum</h1>   
+      <div class="datetime" 
+      style="font-size: 70px; color :#f4f4f4;
+      text-align:center;  margin-top: 100px; 
+      margin-left: 300px; font-family: Arial, sans-serif;  
+    background-color: #87CEEB; height: 150px; width: 500px; border-radius: 10px;">
+  </div> 
+	 	</div> 
+   </section>   
     <script> 
-    let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".sidebarBtn"); 
-    sidebarBtn.onclick = function () {
-        sidebar.classList.toggle("active");
-        if (sidebar.classList.contains("active")) {
-            sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-        } else sidebarBtn.classList.replace("bx-menualt-right", "bx-menu");
-        };
-        </script>
-        </body>
-        </html>
+   setInterval(updateClock, 1000);  	
+   function updateClock() { 
+   	// Mendapatkan tanggal dan waktu saat ini    	
+    var date = new Date(); 
+   	// Menampilkan tanggal dan waktu saat ini di elemen dengan id "datetime"   	
+    document.querySelector(".datetime").innerHTML 	= date.toLocaleString(); 
+	 	} 
+	 	</script> 
+    <script> let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () { 
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu","bx-menu-alt-right");
+            } 
+            else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");};
+            </script>
+</body> 
+</html> 
