@@ -18,9 +18,9 @@
                 <h1>Selamat Datang di Layanan Informasi Transportasi Umum</h1>
             </div>
             <ul> 
-                <li><a href="beranda.html" class="btn_login">Beranda</a></li> 
-                <li><a href="#" class="btn_login">Layanan</a></li> 
-                <li><a href="login.html" class="btn_login">Masuk</a></li> 
+                <li><a href="beranda.php" class="btn_login">Beranda</a></li> 
+                <li><a href="register.php" class="btn_login">Layanan</a></li> 
+                <li><a href="login.php" class="btn_login">Masuk</a></li> 
             </ul>
         </nav> 
     </header>

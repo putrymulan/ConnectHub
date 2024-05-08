@@ -7,7 +7,7 @@
    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/> 
    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
    <title>Input Informasi ConnectHub</title> 
-</head>
+</head> 
 <body> 
    <div class="sidebar"> 
  	<div class="logo-details"> 
@@ -16,19 +16,19 @@
  	</div> 
  	<ul class="nav-links"> 
  	   <li> 
- 	 	<a href="admin.html"> 
+ 	 	<a href="admin.php"> 
  	 	   <i class="bx bx-grid-alt"></i> 
  	 	   <span class="links_name">Dashboard</span> 
  	 	</a> 
  	   </li> 
  	   <li> 
- 	 	<a href="kategori.html"> 
+ 	 	<a href="kategori.php"> 
  	 	   <i class="bx bx-box"></i> 
  	 	   <span class="links_name">Kategori</span> 
  	 	</a> 
  	   </li> 
  	   <li> 
- 	 	<a href="informasi.html"  class="active"> 
+ 	 	<a href="informasi.php"  class="active"> 
  	 	   <i class="bx bx-list-ul"></i> 
  	 	   <span class="links_name">Informasi</span> 
  	 	</a> 

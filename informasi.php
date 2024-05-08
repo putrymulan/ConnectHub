@@ -16,13 +16,13 @@
  	   </div> 
  	   <ul class="nav-links"> 
         <li> 
-            <a href="admin.html"> 
+            <a href="admin.php"> 
                 <i class="bx bx-grid-alt"></i> 
                 <span class="links_name">Dashboard</span> 
             </a> 
         </li>
         <li> 
-            <a href="kategori.html">
+            <a href="kategori.php">
                 <i class="bx bx-box"></i>
                 <span class="links_name">Kategori</span> 
             </a>
@@ -52,7 +52,7 @@
 	 	   <div class="home-content"> 
 	 	 	<h3 class="header">Informasi</h3> 
  	 	<button type="button" class="btn btn-tambah">  	 	  
-            <a href="input-informasi.html">Tambah Data</a> 
+            <a href="input-informasi.php">Tambah Data</a> 
 	 	 	</button> 
 	 	 	<table class="table-data"> 
 	 	 	   <thead> 
