@@ -24,7 +24,7 @@
 <head>
    <meta charset="UTF-8" />
    <link rel="icon" href="bahan/ICON.png" />
-   <link rel="stylesheet" href="admin.css" />
+   <link rel="stylesheet" href="css/admin.css" />
    <!-- Boxicons CDN Link -->
    <link
 	href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -75,7 +75,7 @@
 	   </div>
 	</nav>
 	<div class="home-content">
-	   <h3>Input Kategori</h3>
+	   <h3>Edit Kategori</h3>
 	   <div class="form-login">
 		<form
               action="kategori-proses.php"

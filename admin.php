@@ -1,3 +1,31 @@
+<?php
+// Membuat koneksi ke database
+$koneksi = new mysqli("localhost", "root", "", "db_connecthub");
+
+if ($koneksi->connect_error) {
+    die("Koneksi gagal: " . $koneksi->connect_error);
+}
+// Mengambil total status dari database
+$query = "SELECT COUNT(*) as total_status FROM tb_informasi";
+$result = $koneksi->query($query);
+
+$status = 0;
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $status = $row['total_status'];
+}
+
+// Mengambil total transportasi dari database
+$query = "SELECT COUNT(*) as total_transportasi FROM tb_kategori";
+$result = $koneksi->query($query);
+
+$categories = 0;
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $categories = $row['total_transportasi'];
+}
+$koneksi->close();
+?>
 
 <!DOCTYPE html> 
 <html lang="en"> 
@@ -8,6 +36,41 @@
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
   <title>Admin ConnectHub</title> 
+  <style>
+    .widget {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.2s;
+      margin: 20px 0;
+    }
+    .widget:hover {
+      transform: scale(1.05);
+    }
+    .widget-icon {
+      background: #4CAF50;
+      color: #fff;
+      font-size: 2em;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    .widget-content {
+      margin-left: 20px;
+    }
+    .widget-title {
+      font-size: 1.2em;
+      color: #333;
+    }
+    .widget-amount {
+      font-size: 2em;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
 </head> 
 <body> 
     <div class="sidebar"> 
@@ -35,7 +98,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="logout.php">
                         <i class="bx bx-log-out"></i>
                         <span class="links_name">Keluar</span></a>
                 </li>
@@ -52,14 +115,31 @@
 	 	</nav> 
 	 	<div class="home-content"> 
       <h1 class="header">Selamat Datang Admin di Layanan Informasi Transportasi Umum</h1>   
-      <div class="datetime" 
-      style="font-size: 70px; color :#f4f4f4;
-      text-align:center;  margin-top: 100px; 
-      margin-left: 300px; font-family: Arial, sans-serif;  
-    background-color: #87CEEB; height: 150px; width: 500px; border-radius: 10px;">
+      <div class="datetime" style="font-size: 20px; color :#f4f4f4; text-align:left;  margin-top: 50px; margin-left: 30px; font-family: Arial, sans-serif; height: 150px; width: 500px; border-radius: 10px;">
   </div> 
-	 	</div> 
-   </section>   
+
+  <!-- Widget untuk menampilkan jumlah status -->
+  <div class="widget">
+    <div class="widget-icon">
+      <i class="bx bx-info-circle"></i>
+    </div>
+    <div class="widget-content">
+      <div class="widget-title">Total Status</div>
+      <div class="widget-amount"><?php echo $status; ?></div>
+    </div>
+  </div>
+
+  <div class="widget">
+    <div class="widget-icon">
+      <i class="bx bx-info-circle"></i>
+    </div>
+    <div class="widget-content">
+      <div class="widget-title">Total Transportasi</div>
+      <div class="widget-amount"><?php echo $categories; ?></div>
+    </div>
+  </div>
+</div> 
+   </section>  
     <script> 
    setInterval(updateClock, 1000);  	
    function updateClock() { 
@@ -68,7 +148,7 @@
    	// Menampilkan tanggal dan waktu saat ini di elemen dengan id "datetime"   	
     document.querySelector(".datetime").innerHTML 	= date.toLocaleString(); 
 	 	} 
-	 	</script> 
+	</script> 
     <script> let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
         sidebarBtn.onclick = function () { 
