@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+	if($_SESSION['username'] == null) {
+		header('location:login.php');
+	}
+?>
+
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -34,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="logout.php">
                         <i class="bx bx-log-out"></i>
                         <span class="links_name">Keluar</span></a>
                 </li>
@@ -52,26 +59,29 @@
 <div class="home-content"> 
   <h3 class="header">Input Kategori</h3> 
   <div class="form-login"> 
-     <form action=""> 
-          <label for="categories">Kategori</label> 
-          <input 	class="input" 	type="text" name="categories" 	id="categories" placeholder="Categories"/> 
-         <label for="categories">Deskripsi</label> 
-          <input 	class="input" 	type="text" name="description" id="description" placeholder="Description" /> 
+  <form action="kategori-proses.php" method="post" enctype="multipart/form-data">
+        <label for="kategori">Kategori</label> 
+        <input 	class="input" type="text" name="categories" id="categories" placeholder="Categories"/> 
+        <label for="kategori">Deskripsi</label> 
+        <input 	class="input" type="text" name="description" id="description" placeholder="Description"/> 
+        <label for="kategori">Harga</label> 
+        <input 	class="input" type="text" name="price" id="price" placeholder="Price"/> 
         <label for="photo">Gambar</label> 
-          <input 	type="file" 	name="photo" id="photo" style="margin-bottom: 20px" /> 
+        <input 	type="file" name="photo" id="photo" style="margin-bottom: 20px"/> 
         <button type="submit" class="btn btn-simpan" name="simpan">Simpan</button> 
      </form>
     </div>
 </div> 
 </section>    
-<script> let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn = document.querySelector(".sidebarBtn");
-    sidebarBtn.onclick = function () { 
-        sidebar.classList.toggle("active");
-        if (sidebar.classList.contains("active")) {
-            sidebarBtn.classList.replace("bx-menu","bx-menu-alt-right");
-        } 
-        else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");};
-        </script> 
+<script>
+		let sidebar = document.querySelector(".sidebar");
+		let sidebarBtn = document.querySelector(".sidebarBtn");
+		sidebarBtn.onclick = function() {
+			sidebar.classList.toggle("active");
+			if (sidebar.classList.contains("active")) {
+				sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+			} else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+		};
+	</script> 
 </body> 
-</html> 
+</html>

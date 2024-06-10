@@ -140,7 +140,7 @@ footer {
   .card {
 	display: flex;  	
     flex-direction: column; 
-	width: 30%; 
+	width: 50%; 
 	box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.15); 
  	border-radius: 10px;  	
     padding: 14px; 
